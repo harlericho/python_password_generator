@@ -1,15 +1,10 @@
-import random
-from werkzeug.security import generate_password_hash, check_password_hash
-_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-_lower = 'abcdefghijklmnopqrstuvwxyz'
-_numbers = '0123456789'
-_special = '!@#$%^&*()'
-_simbols = '~`-_=+[{]}\\|;:\'",<.>/?'
+from flask import Flask, render_template
+from generator import generatorText
+app = Flask(__name__)
 
-base = _upper + _lower + _numbers + _special + _simbols
-long = 20
-shows = random.sample(base, long)
-password = ''.join(shows)
-encrypt = generate_password_hash(password)
-# print(password)
-print("{}   =>   {}   =>   {}".format(password, encrypt, check_password_hash(encrypt, password)))
+@app.route('/')
+def index():
+    return render_template('index.html', text=generatorText())
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
