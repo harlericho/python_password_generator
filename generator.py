@@ -7,11 +7,12 @@ def generatorText():
     _special = '!@#$%^&*()'
     _simbols = '~`-_=+[{]}\\|;:\'",<.>/?'
 
-    base = _upper + _lower + _numbers + _special + _simbols
+    base = _upper + _lower + _numbers + _special 
+    # base = _upper + _lower + _numbers + _special + _simbols
     long = 20
     shows = random.sample(base, long)
     password = ''.join(shows)
     encrypt = generate_password_hash(password)
     # print(password)
-    return {'password': password, 'encrypt': encrypt}
-    # print("{}   =>   {}   =>   {}".format(password, encrypt, check_password_hash(encrypt, password)))
+    print("{}   =>   {}   =>   {}".format(password, encrypt, check_password_hash(encrypt, password)))
+    return {'password': password}

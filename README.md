@@ -25,7 +25,7 @@ Programa sencillo para generar contraseñas seguras encriptadas.
 
   > linux: source env/bin/activate
 
-- Dentro del entorno virtual ejecutar el archivo index.py:
+- Dentro del entorno virtual ejecutar el archivo (.py):
    > windows: python app.py
 
    > linux: python3 app.py

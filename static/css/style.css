@@ -1,0 +1,37 @@
+body{
+    background:antiquewhite;
+}
+
+div.card{
+    background:antiquewhite;
+}
+div.card-body{
+    text-align: center;
+}
+h5{
+    border: 0ch;
+    color: black;
+}
+div.card-title{
+    color: black;
+}
+strong{
+    color:darkorange;
+}
+div.card-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+#strong{
+    color:darkred;
+}
+#h5password{
+    color: dimgrey;
+    text-decoration: dotted;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#footer{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: steelblue;
+}
